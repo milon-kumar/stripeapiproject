@@ -31,7 +31,7 @@ class PaymentController extends Controller
                 'card' => $token['id'],
                 'currency' => 'USD',
                 'amount' => $request->get('amount'),
-                'description' => 'Add in wallet',
+                'description' => $request->get('description'),
             ]);
 
             if ($charge['status'] == 'succeeded') {
