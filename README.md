@@ -42,6 +42,9 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
             @ php artisan migrate
 
 #### 5th Step :-
+            
+            Generate Passport Key
+            @ php artisan passport:keys
 
             Generate Passport Client Token
             @ php artisan passport:client --personal
