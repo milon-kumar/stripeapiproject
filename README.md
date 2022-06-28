@@ -55,39 +55,33 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
 ```json
 {
     "info": {
-        "_postman_id": "2857ee1f-6d51-469a-a8d7-39382e9ff775",
-        "name": "Stripe API",
+        "_postman_id": "039e63a5-a4c0-4856-b1e5-b0c975141ac3",
+        "name": "jk api for stripe",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "_exporter_id": "17293494"
     },
     "item": [
         {
-            "name": "User Register",
+            "name": "http://127.0.0.1:1010/api/v1/register",
             "request": {
                 "method": "POST",
-                "header": [
-                    {
-                        "key": "Accept",
-                        "value": "application/json",
-                        "type": "text"
-                    }
-                ],
+                "header": [],
                 "body": {
                     "mode": "formdata",
                     "formdata": [
                         {
                             "key": "name",
-                            "value": "Milon Kumar d",
+                            "value": "user name",
                             "type": "text"
                         },
                         {
                             "key": "username",
-                            "value": "mk88d58",
+                            "value": "user_name1",
                             "type": "text"
                         },
                         {
                             "key": "email",
-                            "value": "mks@gmail.com",
+                            "value": "user1@email.com",
                             "type": "text"
                         },
                         {
@@ -103,12 +97,15 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
                     ]
                 },
                 "url": {
-                    "raw": "http://localhost:8000/api/v1/register",
+                    "raw": "http://127.0.0.1:1010/api/v1/register",
                     "protocol": "http",
                     "host": [
-                        "localhost"
+                        "127",
+                        "0",
+                        "0",
+                        "1"
                     ],
-                    "port": "8000",
+                    "port": "1010",
                     "path": [
                         "api",
                         "v1",
@@ -119,33 +116,30 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
             "response": []
         },
         {
-            "name": "User Verify",
+            "name": "http://127.0.0.1:1010/api/v1/verification",
             "request": {
                 "method": "POST",
-                "header": [
-                    {
-                        "key": "Accept",
-                        "value": "application/json",
-                        "type": "text"
-                    }
-                ],
+                "header": [],
                 "body": {
                     "mode": "formdata",
                     "formdata": [
                         {
                             "key": "email_verification_token",
-                            "value": "882365",
+                            "value": "361808",
                             "type": "text"
                         }
                     ]
                 },
                 "url": {
-                    "raw": "http://localhost:8000/api/v1/verification",
+                    "raw": "http://127.0.0.1:1010/api/v1/verification",
                     "protocol": "http",
                     "host": [
-                        "localhost"
+                        "127",
+                        "0",
+                        "0",
+                        "1"
                     ],
-                    "port": "8000",
+                    "port": "1010",
                     "path": [
                         "api",
                         "v1",
@@ -156,56 +150,7 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
             "response": []
         },
         {
-            "name": "User Login",
-            "request": {
-                "method": "POST",
-                "header": [
-                    {
-                        "key": "Accept",
-                        "value": "application/json",
-                        "type": "text"
-                    }
-                ],
-                "body": {
-                    "mode": "formdata",
-                    "formdata": [
-                        {
-                            "key": "email",
-                            "value": "",
-                            "type": "text"
-                        },
-                        {
-                            "key": "password",
-                            "value": "",
-                            "type": "text"
-                        }
-                    ]
-                },
-                "url": {
-                    "raw": "http://localhost:8000/api/v1/login",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "8000",
-                    "path": [
-                        "api",
-                        "v1",
-                        "login"
-                    ],
-                    "query": [
-                        {
-                            "key": "email",
-                            "value": null,
-                            "disabled": true
-                        }
-                    ]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "User Dashboard",
+            "name": "http://127.0.0.1:1010/api/v1/user",
             "protocolProfileBehavior": {
                 "disableBodyPruning": true
             },
@@ -214,12 +159,7 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
                 "header": [
                     {
                         "key": "Authorization",
-                        "value": "Bearer your_passport_token",
-                        "type": "text"
-                    },
-                    {
-                        "key": "Accept",
-                        "value": "application/json",
+                        "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDY5MzM2MDZmM2VlMjRjNWNjZWE5MWJjMDAzM2JjN2FhYmUyYTEwYzhiMWFkMTZiYzE1MWI1MzQzNjlmYzBiODFiZjZmMDhhNDFmOWFkMmYiLCJpYXQiOjE2NTY0Mzc1NDguNzgyNzc0LCJuYmYiOjE2NTY0Mzc1NDguNzgyNzc2LCJleHAiOjE2ODc5NzM1NDguNzMyMjcsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.Rror19JDW2-jZLSP7iMpYCHqvLCN6qYEimh22i_z680mEnyTUL-0alwddL9fWgIx7VdqQKtDuUQuBy-PXzWxrS8gMXAjy37O1Z6972EHVTwwFy8EMuTR9xYgB8t0DJ6dDdzAv0uzD7236mEGB9DsoGWBLsnAt-w0ooJ1pAK9thTVO46rwkiOWVsOtusdrVqkf6PhpJ3ZD8qzSHio2ytpbs-8hMwBJxtYFE0t7HaUwtdZ7m_PdSI1nMahZS74bs76jiRC06a3C1ykLl7_wTxOM6fzlNsR37HgCjQ-p-V851q41k3LcGD_b-_DdI0ALUziBU7dVOQte9sFGvj_1Nny4taKbQDsHVnakP3cyHhVda165uA7F8V7F7mxgbizl1zTTkR_aX8v7nUoRI_dkr0pUn4t1LpnIiPOGBpki7uEqjwanljNuBAHaYTLXILIwhgfckvakqp-OC8fiadD6AmNtNllhh34x12UjMevPnck0UnDSJmQlumJM9gWNA261tNWbRDZMteP2IvOSZPUZh7sEMDzuiide63xcfGNK9pIivbpak-U8EoRuqSi3MU2GUzNwsQdcVIVGdjtFYSRBuNLBAOkBoyZK_YyL9Xi52eZo6zs6ib0YPoqeG4qjH5-YQ0vdUy01OlFYlGhU7LbSeANBG_SENFKW9kInHvUFzsUDGQ",
                         "type": "text"
                     }
                 ],
@@ -228,12 +168,15 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
                     "formdata": []
                 },
                 "url": {
-                    "raw": "http://localhost:8000/api/v1/user",
+                    "raw": "http://127.0.0.1:1010/api/v1/user",
                     "protocol": "http",
                     "host": [
-                        "localhost"
+                        "127",
+                        "0",
+                        "0",
+                        "1"
                     ],
-                    "port": "8000",
+                    "port": "1010",
                     "path": [
                         "api",
                         "v1",
@@ -244,18 +187,13 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
             "response": []
         },
         {
-            "name": "Stripe Payment",
+            "name": "http://127.0.0.1:1010/api/v1/payment",
             "request": {
                 "method": "POST",
                 "header": [
                     {
-                        "key": "Accept",
-                        "value": "application/json",
-                        "type": "text"
-                    },
-                    {
                         "key": "Authorization",
-                        "value": "Bearer your_passport_token",
+                        "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDY5MzM2MDZmM2VlMjRjNWNjZWE5MWJjMDAzM2JjN2FhYmUyYTEwYzhiMWFkMTZiYzE1MWI1MzQzNjlmYzBiODFiZjZmMDhhNDFmOWFkMmYiLCJpYXQiOjE2NTY0Mzc1NDguNzgyNzc0LCJuYmYiOjE2NTY0Mzc1NDguNzgyNzc2LCJleHAiOjE2ODc5NzM1NDguNzMyMjcsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.Rror19JDW2-jZLSP7iMpYCHqvLCN6qYEimh22i_z680mEnyTUL-0alwddL9fWgIx7VdqQKtDuUQuBy-PXzWxrS8gMXAjy37O1Z6972EHVTwwFy8EMuTR9xYgB8t0DJ6dDdzAv0uzD7236mEGB9DsoGWBLsnAt-w0ooJ1pAK9thTVO46rwkiOWVsOtusdrVqkf6PhpJ3ZD8qzSHio2ytpbs-8hMwBJxtYFE0t7HaUwtdZ7m_PdSI1nMahZS74bs76jiRC06a3C1ykLl7_wTxOM6fzlNsR37HgCjQ-p-V851q41k3LcGD_b-_DdI0ALUziBU7dVOQte9sFGvj_1Nny4taKbQDsHVnakP3cyHhVda165uA7F8V7F7mxgbizl1zTTkR_aX8v7nUoRI_dkr0pUn4t1LpnIiPOGBpki7uEqjwanljNuBAHaYTLXILIwhgfckvakqp-OC8fiadD6AmNtNllhh34x12UjMevPnck0UnDSJmQlumJM9gWNA261tNWbRDZMteP2IvOSZPUZh7sEMDzuiide63xcfGNK9pIivbpak-U8EoRuqSi3MU2GUzNwsQdcVIVGdjtFYSRBuNLBAOkBoyZK_YyL9Xi52eZo6zs6ib0YPoqeG4qjH5-YQ0vdUy01OlFYlGhU7LbSeANBG_SENFKW9kInHvUFzsUDGQ",
                         "type": "text"
                     }
                 ],
@@ -263,7 +201,7 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
                     "mode": "formdata",
                     "formdata": [
                         {
-                            "key": "number",
+                            "key": "card_no",
                             "value": "4242424242424242",
                             "type": "text"
                         },
@@ -278,29 +216,22 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
                             "type": "text"
                         },
                         {
-                            "key": "cvc",
-                            "value": "123",
-                            "type": "text"
-                        },
-                        {
                             "key": "amount",
-                            "value": "32",
-                            "type": "text"
-                        },
-                        {
-                            "key": "email",
-                            "value": "sdfsdf@mail.com",
+                            "value": "321654",
                             "type": "text"
                         }
                     ]
                 },
                 "url": {
-                    "raw": "http://localhost:8000/api/v1/payment",
+                    "raw": "http://127.0.0.1:1010/api/v1/payment",
                     "protocol": "http",
                     "host": [
-                        "localhost"
+                        "127",
+                        "0",
+                        "0",
+                        "1"
                     ],
-                    "port": "8000",
+                    "port": "1010",
                     "path": [
                         "api",
                         "v1",
@@ -311,39 +242,39 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
             "response": []
         },
         {
-            "name": "User Logout",
-            "protocolProfileBehavior": {
-                "disableBodyPruning": true
-            },
+            "name": "http://127.0.0.1:1010/api/v1/login",
             "request": {
-                "method": "GET",
-                "header": [
-                    {
-                        "key": "Accept",
-                        "value": "application/json",
-                        "type": "text"
-                    },
-                    {
-                        "key": "Authorization",
-                        "value": "Bearer your_passport_token",
-                        "type": "text"
-                    }
-                ],
+                "method": "POST",
+                "header": [],
                 "body": {
                     "mode": "formdata",
-                    "formdata": []
+                    "formdata": [
+                        {
+                            "key": "email",
+                            "value": "user1@email.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123456",
+                            "type": "text"
+                        }
+                    ]
                 },
                 "url": {
-                    "raw": "http://localhost:8000/api/v1/mylogout",
+                    "raw": "http://127.0.0.1:1010/api/v1/login",
                     "protocol": "http",
                     "host": [
-                        "localhost"
+                        "127",
+                        "0",
+                        "0",
+                        "1"
                     ],
-                    "port": "8000",
+                    "port": "1010",
                     "path": [
                         "api",
                         "v1",
-                        "mylogout"
+                        "login"
                     ]
                 }
             },
