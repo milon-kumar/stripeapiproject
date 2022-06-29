@@ -23,8 +23,10 @@ class PaymentController extends Controller
             ]);
 
             if (!isset($token['id'])) {
-                Session::put('error', 'The Stripe Token was not generated correctly');
-                return redirect()->route('stripform');
+                return response()->json([
+                    'status'=>false,
+                    'message'=>'The Stripe Token was not generated correctly',
+                ]);
             }
 
             $charge = $stripe->charges()->create([
@@ -38,22 +40,36 @@ class PaymentController extends Controller
                 /**
                  * Write Here Your Database insert logic.
                  */
-                Session::put('success', 'Money add successfully in wallet');
-
-                return redirect()->route('stripform');
+                return response()->json([
+                    'status'=>true,
+                    'message'=>'Money add successfully in wallet',
+                    'data'=>$charge,
+                ]);
             } else {
-                Session::put('error', 'Money not add in wallet!!');
-                return redirect()->route('stripform');
+                return response()->json([
+                    'status'=>false,
+                    'message'=>'Money not add in wallet!!',
+                ]);
             }
         } catch (\Exception $e) {
-            Session::put('error', $e->getMessage());
-            return redirect()->route('stripform');
+            return response()->json([
+                'status'=>false,
+                'message'=>'Token Created Fail',
+                'data'=>$e->getMessage(),
+            ]);
+
         } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
-            Session::put('error', $e->getMessage());
-            return redirect()->route('stripform');
+            return response()->json([
+                'status'=>false,
+                'message'=>'Fail',
+                'data'=>$e->getMessage(),
+            ]);
         } catch (\Cartalyst\Stripe\Exception\MissingParameterException $e) {
-            Session::put('error', $e->getMessage());
-            return redirect()->route('stripform');
+            return response()->json([
+                'status'=>false,
+                'message'=>'Fail',
+                'data'=>$e->getMessage(),
+            ]);
         }
 
 

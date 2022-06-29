@@ -35,14 +35,17 @@ Clone My Github Repository... My Github Repository = [StripeAPI](https://github.
 #### 3rd Step :-
 
             connect your database your with app
-
+            Configer Your Mail Server
+            Configer Stripe Secret Key
 #### 4th Step :-
 
             run migration
             @ php artisan migrate
 
 #### 5th Step :-
-            
+            App key generate 
+            @ php artisan key:generate
+
             Generate Passport Key
             @ php artisan passport:keys
 
